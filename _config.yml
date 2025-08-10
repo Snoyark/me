@@ -1,0 +1,39 @@
+# GitHub Pages Configuration
+title: "Neel Venugopal - Software Engineer"
+description: "Personal website of Neel Venugopal, Software Engineer at Hive.Ai"
+url: "https://snoyark.github.io"
+baseurl: "/personal-website"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+
+# Exclude files from processing
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .sass-cache
+  - .jekyll-cache
+  - .jekyll-metadata
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# SEO settings
+author: Neel Venugopal
+twitter:
+  username: 
+linkedin:
+  username: neel-venugopal
+github:
+  username: Snoyark
+
+# Theme
+theme: minima
