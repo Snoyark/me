@@ -279,6 +279,20 @@ const Contact = () => {
 
           <ContactItem className="contact-item">
             <ContactIcon>
+              <i className="fas fa-envelope"></i>
+            </ContactIcon>
+            <ContactDetails>
+              <ContactTitle>Email</ContactTitle>
+              <ContactText>
+                <ContactLink href="mailto:neelv7@berkeley.edu">
+                  neelv7@berkeley.edu
+                </ContactLink>
+              </ContactText>
+            </ContactDetails>
+          </ContactItem>
+
+          <ContactItem className="contact-item">
+            <ContactIcon>
               <i className="fab fa-github"></i>
             </ContactIcon>
             <ContactDetails>

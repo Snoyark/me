@@ -213,7 +213,7 @@ const ProjectCard = ({ project, className }) => {
         <CardTitle>{project.name}</CardTitle>
         <CardDescription>{description}</CardDescription>
       </CardHeader>
-      
+
       {project.language && (
         <CardMeta>
           <Language>
@@ -234,10 +234,12 @@ const ProjectCard = ({ project, className }) => {
       )}
 
       <CardLinks>
-        <ProjectLink href={project.html_url} target="_blank">
-          <i className="fab fa-github"></i>
-          View Code
-        </ProjectLink>
+        {project.html_url && (
+          <ProjectLink href={project.html_url} target="_blank">
+            <i className="fab fa-github"></i>
+            View Code
+          </ProjectLink>
+        )}
         {project.homepage && (
           <ProjectLink href={project.homepage} target="_blank" className="demo">
             <i className="fas fa-external-link-alt"></i>
@@ -273,4 +275,4 @@ export const ErrorProjectCard = () => (
   </Card>
 );
 
-export default ProjectCard;
+export default ProjectCard

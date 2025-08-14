@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
+import img from '../images/self.jpg'
+
 const HeroSection = styled.section`
   min-height: 100vh;
   display: flex;
@@ -179,19 +181,19 @@ const ProfileHeader = styled.div`
   margin-bottom: 2rem;
 `;
 
-const ProfileAvatar = styled.div`
-  width: 80px;
-  height: 80px;
-  background: linear-gradient(135deg, #63b3ed, #805ad5);
+const ProfileAvatar = styled.img`
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   margin: 0 auto 1rem;
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: white;
-  font-family: 'Source Code Pro', monospace;
+  object-fit: cover;
+  border: 3px solid rgba(99, 179, 237, 0.3);
+  transition: all 0.3s ease;
+
+  &:hover {
+    border-color: rgba(99, 179, 237, 0.6);
+    transform: scale(1.05);
+  }
 `;
 
 const ProfileName = styled.h3`
@@ -262,35 +264,42 @@ const ProfileLink = styled.a`
 `;
 
 const Home = () => {
-  const [displayText, setDisplayText] = useState('');
   const fullText = 'Neel Venugopal';
+  const [displayText, setDisplayText] = useState(fullText);
 
-  useEffect(() => {
-    let i = 0;
-    const typeWriter = () => {
-      if (i < fullText.length) {
-        setDisplayText(prev => prev + fullText.charAt(i));
-        i++;
-        setTimeout(typeWriter, 80);
-      }
-    };
+  // useEffect(() => {
+  //   let i = 0;
+  //   const typeWriter = () => {
+  //     if (i < fullText.length) {
+  //       setDisplayText(prev => prev + fullText.charAt(i));
+  //       i++;
+  //       setTimeout(typeWriter, 80);
+  //     }
+  //   };
     
-    // Start typing effect after a short delay
-    const timer = setTimeout(typeWriter, 500);
-    return () => clearTimeout(timer);
-  }, []);
+  //   // Start typing effect after a short delay
+  //   const timer = setTimeout(typeWriter, 500);
+  //   return () => clearTimeout(timer);
+  // }, []);
 
   return (
     <HeroSection>
       <HeroContainer>
         <HeroContent>
-          <HeroTitle>{displayText}</HeroTitle>
-          <HeroSubtitle>Software Engineer</HeroSubtitle>
+          {/* <HeroTitle>{displayText}</HeroTitle> */}
+          <HeroSubtitle>Driving disruptive innovations that have an impact on millions of people </HeroSubtitle>
           <HeroDivider />
           <HeroDescription>
-            Software engineer based in San Francisco, currently working at Hive.Ai. 
-            I focus on building reliable, efficient software solutions and contributing 
-            to AI technology development.
+            As a software engineer, I excel at collaborating closely with engineers and product managers to understand complex problems and translate them into simple and impactful solutions to improve customer outcomes. 
+          </HeroDescription>
+          <HeroDescription>
+            I have a relentless drive for results and for meeting personal and team commitments. I am good at prioritizing among competing demands and keeping focus on what is important, while still being able to balance less urgent projects.
+          </HeroDescription>
+          <HeroDescription>
+            With a passion for learning, curiosity and the ability to go deep on any subject, I am confident that I can adapt to new technologies and situations. I enjoy helping and mentoring people to grow and strengthen teams.
+          </HeroDescription>
+          <HeroDescription>
+            I believe the work I do should drive positive change for people everywhere, and I am always striving to become better.
           </HeroDescription>
           <HeroButtons>
             <Button to="/experience" className="primary">Experience</Button>
@@ -302,23 +311,15 @@ const Home = () => {
         <HeroSidebar>
           <ProfileCard>
             <ProfileHeader>
-              <ProfileAvatar>NV</ProfileAvatar>
+              <ProfileAvatar src={img} alt="Neel Venugopal" />
               <ProfileName>Neel Venugopal</ProfileName>
-              <ProfileTitle>Software Engineer at Hive.Ai</ProfileTitle>
+              <ProfileTitle>Senior Software Engineer at Hive.Ai</ProfileTitle>
             </ProfileHeader>
             
             <ProfileStats>
               <StatItem>
                 <StatLabel>Location</StatLabel>
                 <StatValue>San Francisco, CA</StatValue>
-              </StatItem>
-              <StatItem>
-                <StatLabel>GitHub Repos</StatLabel>
-                <StatValue>9</StatValue>
-              </StatItem>
-              <StatItem>
-                <StatLabel>Achievements</StatLabel>
-                <StatValue>7</StatValue>
               </StatItem>
             </ProfileStats>
 

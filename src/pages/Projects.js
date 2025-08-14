@@ -49,6 +49,7 @@ const PageSubtitle = styled.p`
 
 const ProjectsGrid = styled.div`
   display: grid;
+  justify-content: center;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 2rem;
   margin-bottom: 3rem;
@@ -167,8 +168,7 @@ const Projects = () => {
         </EmptyState>
       );
     }
-
-    return projects.map((project, index) => (
+    const projects_map = projects.map((project, index) => (
       <ProjectCard 
         key={project.id} 
         project={project} 
@@ -176,6 +176,18 @@ const Projects = () => {
         style={{ animationDelay: `${index * 0.1}s` }}
       />
     ));
+    projects_map.push(<ProjectCard
+        key={projects_map.length + 1}
+        project={{
+          name: 'project-bluff',
+          language: 'Typescript',
+          description: 'An online implementation the card game Bluff.',
+          homepage: "https://projectbluff.com"
+        }}
+        className="project-card"
+        style={{ animationDelay: `${projects_map.length * 0.1}s` }}
+    />)
+    return projects_map;
   };
 
   return (
