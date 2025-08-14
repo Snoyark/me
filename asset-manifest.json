@@ -1,0 +1,11 @@
+{
+  "files": {
+    "main.js": "/readme/static/js/main.f25884a1.js",
+    "static/media/self.jpg": "/readme/static/media/self.4c7258759db6900d2233.jpg",
+    "index.html": "/readme/index.html",
+    "main.f25884a1.js.map": "/readme/static/js/main.f25884a1.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.f25884a1.js"
+  ]
+}
