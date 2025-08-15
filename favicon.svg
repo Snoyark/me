@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <rect width="32" height="32" fill="#1a1a2e"/>
+  <g transform="translate(16,16)">
+    <!-- Rocket body -->
+    <ellipse cx="0" cy="2" rx="3" ry="8" fill="#e94560"/>
+    <!-- Rocket tip -->
+    <ellipse cx="0" cy="-6" rx="1.5" ry="3" fill="#f39c12"/>
+    <!-- Rocket windows -->
+    <circle cx="0" cy="0" r="1.5" fill="#74b9ff"/>
+    <circle cx="0" cy="4" r="1" fill="#74b9ff"/>
+    <!-- Flames -->
+    <ellipse cx="0" cy="12" rx="2" ry="3" fill="#f39c12"/>
+    <ellipse cx="0" cy="14" rx="1" ry="2" fill="#e74c3c"/>
+  </g>
+</svg>
