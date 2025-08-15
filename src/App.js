@@ -27,10 +27,10 @@ function App() {
       <Navbar />
       <MainContent>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/experience" element={<Experience />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/readme/" element={<Home />} />
+          <Route path="/readme/experience" element={<Experience />} />
+          <Route path="/readme/projects" element={<Projects />} />
+          <Route path="/readme/contact" element={<Contact />} />
         </Routes>
       </MainContent>
       <Footer />
